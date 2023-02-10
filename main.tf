@@ -18,7 +18,7 @@ resource "aws_iam_user" "new-users" {
 
 resource "aws_s3_bucket" "s3" {
   count  = 2
-  bucket = "S3-Bucket-project1-${count.index}"
+  bucket = "S3-Bucket-192b2-${count.index}"
   tags = {
     environment = var.environment
   }
@@ -30,7 +30,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_storage_account" "storage_account" {
-  name                     = "azurestorageproject1"
+  name                     = "azurestoragepj120398"
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
